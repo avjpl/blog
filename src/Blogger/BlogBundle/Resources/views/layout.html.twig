@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        {% block body_inner %}{% endblock %}
+
+        {% block sidebar %}
+            <div class="large-3 columns">
+                {{ render(controller('BloggerBlogBundle:Blog:sidebar')) }}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="row">
+        <div class="large-4 columns">
+            col1
+        </div>
+
+        <div class="large-4 columns">
+            col2
+        </div>
+
+        <div class="large-4 columns">
+            col3
+        </div>
+    </div>
+{% endblock %}

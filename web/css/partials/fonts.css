@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'mgopen_cosmeticaregular';
+  src: url("../css/fonts/mgopencosmeticaregular-webfont.eot");
+  src: url("../css/fonts/mgopencosmeticaregular-webfont.eot?#iefix") format("embedded-opentype"), url("../css/fonts/mgopencosmeticaregular-webfont.woff") format("woff"), url("../css/fonts/mgopencosmeticaregular-webfont.ttf") format("truetype"), url("../css/fonts/mgopencosmeticaregular-webfont.svg#mgopen_cosmeticaregular") format("svg"); }
+@font-face {
+  font-family: 'geosanslightregular';
+  src: url("../css/fonts/geosanslight-webfont.eot");
+  src: url("../css/fonts/geosanslight-webfont.eot?#iefix") format("embedded-opentype"), url("../css/fonts/geosanslight-webfont.woff") format("woff"), url("../css/fonts/geosanslight-webfont.ttf") format("truetype"), url("../css/fonts/geosanslight-webfont.svg#geosanslightregular") format("svg"); }
+@font-face {
+  font-family: 'titrebook';
+  src: url("../css/fonts/titre-webfont.eot");
+  src: url("../css/fonts/titre-webfont.eot?#iefix") format("embedded-opentype"), url("../css/fonts/titre-webfont.woff") format("woff"), url("../css/fonts/titre-webfont.ttf") format("truetype"), url("../css/fonts/titre-webfont.svg#titrebook") format("svg"); }
+@font-face {
+  font-family: 'openSansLight';
+  src: url("../css/fonts/opensans-light-webfont.eot");
+  src: url("../css/fonts/opensans-light-webfont.eott?#iefix") format("embedded-opentype"), url("../css/fonts/opensans-light-webfont.woff") format("woff"), url("../css/fonts/opensans-light-webfont.ttf") format("truetype"), url("../css/fonts/opensans-light-webfont.svg#titrebook") format("svg"); }
+@font-face {
+  font-family: 'openSansRegular';
+  src: url("../css/fonts/opensans-regular-webfont.eot");
+  src: url("../css/fonts/opensans-regular-webfont.eott?#iefix") format("embedded-opentype"), url("../css/fonts/opensans-regular-webfont.woff") format("woff"), url("../css/fonts/opensans-regular-webfont.ttf") format("truetype"), url("../css/fonts/opensans-regular-webfont.svg#titrebook") format("svg"); }
+@font-face {
+  font-family: 'openSansItalic';
+  src: url("../css/fonts/opensans-italic-webfont.eot");
+  src: url("../css/fonts/opensans-italic-webfont.eott?#iefix") format("embedded-opentype"), url("../css/fonts/opensans-italic-webfont.woff") format("woff"), url("../css/fonts/opensans-italic-webfont.ttf") format("truetype"), url("../css/fonts/opensans-italic-webfont.svg#titrebook") format("svg"); }
+@font-face {
+  font-family: 'openSansSemiBoldItalic';
+  src: url("../css/fonts/opensans-semibolditalic-webfont.eot");
+  src: url("../css/fonts/opensans-semibolditalic-webfont.eott?#iefix") format("embedded-opentype"), url("../css/fonts/opensans-semibolditalic-webfont.woff") format("woff"), url("../css/fonts/opensans-semibolditalic-webfont.ttf") format("truetype"), url("../css/fonts/opensans-semibolditalic-webfont.svg#titrebook") format("svg"); }

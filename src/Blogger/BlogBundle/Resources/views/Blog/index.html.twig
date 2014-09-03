@@ -1,0 +1,22 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block body_inner %}
+<div class="large-8 columns">
+    {% for article in articles %}
+        <article id="{{ article.id }}">
+            <header>
+                <h2><a href="{{ path('BloggerBlog_show', {id: article.id, 'slug': article.slug}) }}">{{ article.title }}</a></h2>
+                <img src="{{ asset(['images/', article.image]|join) }}" alt="" />
+            </header>
+            <p>Posted: <time datetime="{{ article.createdAt|date('c') }}">{{ article.createdAt|date('F jS Y') }}</time></p>
+            <p>{{ article.content|trunc }}</p>
+            <a href="{{ path('BloggerBlog_show', {id: article.id, 'slug': article.slug}) }}">Read More</a>
+            <footer>
+                <p>Comments: {{ article.comments|length }}</p>
+                <p>Posted by <span>{{ article.author }}</span> at {{ article.createdAt|date('h:iA') }}</p>
+                <p>Tags: <span>{{ article.tags }}</span></p>
+            </footer>
+        </article>
+    {% endfor  %}
+</div>
+{% endblock %}
