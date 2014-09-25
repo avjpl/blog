@@ -1,4 +1,16 @@
-.sidebar {
+/* tag cloud */
+#tag-cloud {
+  h3 {
+    font-family: geosanslightregular;
+  }
+
+  a {
+    color: $dark-red;
+    display: inline-block;
+    background: white;
+    padding: 0 7px;
+    margin-bottom: 4px;
+  }
 
   .tags {
     .weight-1 { font-size: rem-calc(12); }
@@ -6,5 +18,36 @@
     .weight-3 { font-size: rem-calc(18); }
     .weight-4 { font-size: rem-calc(21); }
     .weight-5 { font-size: rem-calc(24); }
+  }
+}
+
+/* Comments */
+#comments {
+  .comment {
+    overflow: hidden;
+    padding: 10px 0;
+
+    div {
+      float: left;
+      width: rem-calc(622);
+      border-bottom: $cream 2px solid;
+      padding-bottom: 10px;
+    }
+  }
+
+  img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  h3 {
+    font-family: geosanslightregular;
+  }
+}
+
+/* Lastest comments */
+#latest-comments {
+  h3 {
+    font-family: geosanslightregular;
   }
 }

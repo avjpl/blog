@@ -7447,54 +7447,111 @@ body {
 /* line 54, ../sass/partials/_base.scss */
 main {
   margin-top: 20px; }
-  /* line 57, ../sass/partials/_base.scss */
-  main article {
-    overflow: hidden;
-    margin-bottom: 20px;
-    border-bottom: 1px dotted; }
-    /* line 62, ../sass/partials/_base.scss */
-    main article h2 a,
-    main article h2 + p,
-    main article header h2 {
-      color: #703030; }
-    /* line 68, ../sass/partials/_base.scss */
-    main article h2 {
-      font-family: geosanslightregular;
-      font-size: 1.375rem;
-      margin: 0; }
-      /* line 73, ../sass/partials/_base.scss */
-      main article h2 + p {
-        font-family: openSansItalic;
-        font-size: 0.875rem;
-        margin-top: -3px; }
-        /* line 78, ../sass/partials/_base.scss */
-        main article h2 + p time {
-          font-weight: bold; }
-      /* line 83, ../sass/partials/_base.scss */
-      main article h2 + img {
-        float: left;
-        margin: 5px 10px 28px 0;
-        width: 100px;
-        height: 100px; }
-      /* line 90, ../sass/partials/_base.scss */
-      main article h2 a:hover {
-        color: #b55151; }
-    /* line 95, ../sass/partials/_base.scss */
-    main article img {
-      width: 100%;
-      height: 150px;
-      margin-bottom: 14px;
-      border: 4px solid #fff; }
-    /* line 102, ../sass/partials/_base.scss */
-    main article p {
-      margin-bottom: 5px;
+  /* line 58, ../sass/partials/_base.scss */
+  main article h2 a,
+  main article h2 + p,
+  main article header h2 {
+    color: #703030; }
+  /* line 64, ../sass/partials/_base.scss */
+  main article h2 {
+    font-family: geosanslightregular;
+    font-size: 1.375rem;
+    margin: 0; }
+    /* line 69, ../sass/partials/_base.scss */
+    main article h2 + p {
+      font-family: openSansItalic;
       font-size: 0.875rem;
-      color: #2d2d2d; }
-    /* line 108, ../sass/partials/_base.scss */
-    main article a {
-      color: #703030; }
-      /* line 111, ../sass/partials/_base.scss */
-      main article a:hover {
-        color: #b55151; }
+      margin-top: -3px; }
+      /* line 74, ../sass/partials/_base.scss */
+      main article h2 + p time {
+        font-weight: bold; }
+    /* line 79, ../sass/partials/_base.scss */
+    main article h2 + img {
+      float: left;
+      margin: 5px 10px 28px 0;
+      width: 100px;
+      height: 100px; }
+    /* line 86, ../sass/partials/_base.scss */
+    main article h2 a:hover {
+      color: #b55151; }
+  /* line 91, ../sass/partials/_base.scss */
+  main article img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 14px;
+    border: 4px solid #fff; }
+  /* line 98, ../sass/partials/_base.scss */
+  main article p {
+    margin-bottom: 5px;
+    font-size: 0.875rem;
+    color: #2d2d2d; }
+  /* line 104, ../sass/partials/_base.scss */
+  main article a {
+    color: #703030; }
+    /* line 107, ../sass/partials/_base.scss */
+    main article a:hover {
+      color: #b55151; }
 
-/* Footer */
+/* tag cloud */
+/* line 3, ../sass/partials/_modules.scss */
+#tag-cloud h3 {
+  font-family: geosanslightregular; }
+/* line 7, ../sass/partials/_modules.scss */
+#tag-cloud a {
+  color: #703030;
+  display: inline-block;
+  background: white;
+  padding: 0 7px;
+  margin-bottom: 4px; }
+/* line 16, ../sass/partials/_modules.scss */
+#tag-cloud .tags .weight-1 {
+  font-size: 0.75rem; }
+/* line 17, ../sass/partials/_modules.scss */
+#tag-cloud .tags .weight-2 {
+  font-size: 0.9375rem; }
+/* line 18, ../sass/partials/_modules.scss */
+#tag-cloud .tags .weight-3 {
+  font-size: 1.125rem; }
+/* line 19, ../sass/partials/_modules.scss */
+#tag-cloud .tags .weight-4 {
+  font-size: 1.3125rem; }
+/* line 20, ../sass/partials/_modules.scss */
+#tag-cloud .tags .weight-5 {
+  font-size: 1.5rem; }
+
+/* Comments */
+/* line 26, ../sass/partials/_modules.scss */
+#comments .comment {
+  overflow: hidden;
+  padding: 10px 0; }
+  /* line 30, ../sass/partials/_modules.scss */
+  #comments .comment div {
+    float: left;
+    width: 38.875rem;
+    border-bottom: #e3cda4 2px solid;
+    padding-bottom: 10px; }
+/* line 38, ../sass/partials/_modules.scss */
+#comments img {
+  float: left;
+  margin-right: 20px; }
+/* line 43, ../sass/partials/_modules.scss */
+#comments h3 {
+  font-family: geosanslightregular; }
+
+/* Lastest comments */
+/* line 50, ../sass/partials/_modules.scss */
+#latest-comments h3 {
+  font-family: geosanslightregular; }
+
+/* line 2, ../sass/partials/_blog.scss */
+#posts .post {
+  padding: 10px 0;
+  border-bottom: 1px dotted; }
+
+/* comments placeholder */
+/* line 3, ../sass/partials/_placeholders.scss */
+.avatar {
+  width: 78px;
+  height: 78px;
+  display: block;
+  background: #aaa; }

@@ -1,10 +1,20 @@
 {% for comment in comments %}
     <article id="{{ comment.id }}">
-        <header>
-            <p><span>{{ comment.user }}</span> commented
-                <time datetime="{{ comment.createdAt|date('c') }}">{{ comment.createdAt|date('l, F j, Y') }}</time> </p>
-        </header>
-        <p>{{ comment.comment }}</p>
+        <div class="comment">
+            <img class="avatar" src="{{ comment.email|gravatar }}" alt="Avatar image" />
+
+            <div>
+                <p>
+                    <span>{{ comment.user }}</span> commented
+                    <time datetime="{{ comment.createdAt|date('c') }}">{{ comment.createdAt|date('l, F j, Y') }}</time>
+                </p>
+
+                <p>{{ comment.comment }}</p>
+
+                <!-- TODO: -->
+                <!--<a href="{{ comment.id }}">Reply to comment</a>-->
+            </div>
+        </div>
     </article>
 {% else %}
     <p>There are no comment for the post. Be the first to comment&hellip;</p>

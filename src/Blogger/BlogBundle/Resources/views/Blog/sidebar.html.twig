@@ -1,9 +1,37 @@
+<section id="latest-comments">
+    <header>
+        <h3>Latest Comments</h3>
+    </header>
+    {% for comment in latestComments %}
+        <article>
+            <div>
+                <header>
+                    <p>
+                        <span>{{ comment.user }}</span> commented on
+                        <a href="{{ path('BloggerBlog_show', {'id': comment.blog.id, 'slug': comment.blog.slug}) }}#comment-{{ comment.id }}">
+                            {{ comment.blog.title }}
+                        </a>
+                        <small>[<em>
+                                <time datetime="{{ comment.createdAt|date('c') }}">{{ comment.createdAt|created_ago }}</time>
+                            </em>]
+                        </small>
+                    </p>
+                </header>
+
+                <p>{{ comment.comment }}</p>
+            </div>
+        </article>
+    {% else %}
+        <p>There are no comments</p>
+    {% endfor %}
+</section>
+
 <section id="tag-cloud">
     <header>
         <h3>Tag Cloud</h3>
     </header>
 
-    <p>
+    <p class="tags">
         {% for tag, weight in tags %}
             <a href="{{ path('BloggerBlog_showTaggedPost', {'tag': tag|trim}) }}">
                 <span class="weight-{{ weight }}">{{ tag }}</span>
@@ -12,28 +40,4 @@
             <p>There are no tags</p>
         {% endfor %}
     </p>
-</section>
-
-<section>
-    <header>
-        <h3>Latest Comments</h3>
-    </header>
-    {% for comment in latestComments %}
-        <article>
-            <header>
-                <p><span>{{ comment.user }}</span> commented on
-                    <a href="{{ path('BloggerBlog_show', {'id': comment.blog.id, 'slug': comment.blog.slug}) }}#comment-{{ comment.id }}">
-                        {{ comment.blog.title }}
-                    </a>
-                    <small>[<em>
-                        <time datetime="{{ comment.createdAt|date('c') }}">{{ comment.createdAt|created_ago }}</time>
-                    </em>]</small>
-                </p>
-            </header>
-
-            <p>{{ comment.comment }}</p>
-        </article>
-    {% else %}
-        <p>There are no comments</p>
-    {% endfor %}
 </section>

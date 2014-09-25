@@ -1,28 +1,37 @@
 require.config({
-  paths: {
-    'jQuery': '../bower_components/jquery/dist/jquery',
-    'lodash': '../bower_components/lodash/dist/lodash'
-  },
-  shim: {
-    'jQuery': {
-        exports: '$'
+    paths: {
+        'jQuery': '../bower_components/jquery/dist/jquery',
+        'lodash': '../bower_components/lodash/dist/lodash',
+        'ckeditor-core':'../bower_components/ckeditor/ckeditor',
+        'ckeditor-jquery':'../bower_components/ckeditor/adapters/jquery'
+    },
+    shim: {
+        'jQuery': {
+            exports: '$'
+        },
+        'ckeditor-jquery':{
+            deps:['jQuery','ckeditor-core']
+        }
     }
-  }
 });
 
 require(['loader', '../bundles/bloggerblog/js/blog'], function(loader) {
-  var _loader = new loader();
-  var _parts = _loader.getUrlParts();
+    var _loader = new loader();
+//  var _parts = _loader.getUrlParts();
+//    console.log(_parts);
+//    console.log(_loader.lookup());
+//    console.log(_loader.lookup('blog/show', 0));
+//    console.log(_loader.lookup('blog/show', 'index'));
+//    console.log(_loader.lookup('blog/show', 'input'));
 
-    switch(_parts[_parts.length - 1]) {
-      case 'contact':
-        var _blog = require('../bundles/bloggerblog/js/blog'),
-            _blog = new _blog;
+    switch(_loader.lookup()) {
+        case 'blog':
+            var _blog = require('../bundles/bloggerblog/js/blog');
 
-          console.log(_blog.getName());
+            _blog._init(_loader.lookup('blog/show', 0));
         break;
 
         default:
-          console.log('must be at / (root)');
+            console.log('must be at / (root)');
     }
 });

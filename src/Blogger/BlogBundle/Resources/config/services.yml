@@ -14,3 +14,8 @@ services:
         class: Blogger\BlogBundle\Twig\Extensions\CreatedAgo
         tags:
             - { name: twig.extension }
+
+    blogger.twig.blogbundle_extension_gravatar:
+            class: Blogger\BlogBundle\Twig\Extensions\Gravatar
+            tags:
+                - { name: twig.extension }

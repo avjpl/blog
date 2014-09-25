@@ -51,6 +51,11 @@ class Comment
      */
     protected $updated_at;
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $email;
+
     public function __construct()
     {
         $this->setCreatedAt(new \DateTime());
@@ -224,5 +229,28 @@ class Comment
         $metadata->addPropertyConstraint('comment', new NotBlank(array(
             'message' => 'You must enter a comment'
         )));
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Comment
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
     }
 }

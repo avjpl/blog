@@ -51,6 +51,11 @@ class Comment
      */
     protected $updated_at;
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $email;
+
     public function __construct()
     {
         $this->setCreatedAt(new \DateTime());
