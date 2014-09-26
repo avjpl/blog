@@ -12,13 +12,13 @@ class Gravatar extends \Twig_Extension
 
     public function getGravatar($email, $size = 78, $default = '')
     {
-        if(! $this->checkEmail($email) && iseet($default)) {
-            $default = "http://www.gravatar.com/avatar?s=" . $size ;
+        $base = "http://www.gravatar.com/avatar";
+
+        if(! $this->checkEmail($email) && !isset($default)) {
+            return $base . "?s=" . $size;
         }
 
-        return "http://www.gravatar.com/avatar/" . md5(strtolower(trim($email))) .
-                "?d=" . urlencode($default) .
-                "?s=" . $size;
+        return $base . "/" . md5(strtolower(trim($email))) . "?s=" . $size;
     }
 
     /**
