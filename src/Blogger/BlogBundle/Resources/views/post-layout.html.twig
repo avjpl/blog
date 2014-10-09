@@ -3,6 +3,12 @@
 {% block body %}
     <div class="row">
         {% block body_inner %}{% endblock %}
+
+        {% block sidebar %}
+            <div class="large-3 columns">
+                {{ render(controller('BloggerBlogBundle:Blog:sidebar')) }}
+            </div>
+        {% endblock %}
     </div>
 {% endblock %}
 

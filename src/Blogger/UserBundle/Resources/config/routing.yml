@@ -1,0 +1,13 @@
+login:
+    pattern:  /login
+    defaults: { _controller: BloggerUserBundle:Security:login }
+login_check:
+    path: /login_check
+
+account_register:
+    path:   /register
+    defaults: { _controller: BloggerUserBundle:Account:register }
+
+account_create:
+    path:     /register/create
+    defaults: { _controller: BloggerUserBundle:Account:create }

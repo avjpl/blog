@@ -24,8 +24,24 @@ class BlogRepository extends EntityRepository
             $qb->setMaxResults($limit);
         }
 
-        return $qb->getQuery()
-                ->getResult();
+        return $qb->getQuery()->getResult();
+    }
+
+    public function getPostByCategory($cat, $limit = null)
+    {
+        $qb = $this->createQueryBuilder('b');
+
+        $qb->select('b', 'c')
+            ->leftJoin('b.comments', 'c')
+            ->where($qb->expr()->like('b.category', ':cat'))
+            ->addOrderBy('b.created_at', 'DESC')
+            ->setParameter(':cat', '%'.$cat.'%');
+
+        if (false === is_null($limit)) {
+            $qb->setMaxResults($limit);
+        }
+
+        return $qb->getQuery()->getResult();
     }
 
     public function getBlogsByTagName($tag, $limit = null)

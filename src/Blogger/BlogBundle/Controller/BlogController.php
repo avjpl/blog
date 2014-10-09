@@ -23,6 +23,18 @@ class BlogController extends Controller
         ));
     }
 
+    public function categoryAction($cat, $limit = null)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $articles = $em->getRepository('BloggerBlogBundle:Blog')
+            ->getPostByCategory($cat, $limit);
+
+        return $this->render('BloggerBlogBundle:Blog:index.html.twig', array(
+            'articles' => $articles
+        ));
+    }
+
     public function taggedPostAction($tag = null, $limit = null)
     {
         $em = $this->getDoctrine()->getManager();

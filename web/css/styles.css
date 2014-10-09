@@ -7443,55 +7443,6 @@ body {
         #header nav li a:hover {
           color: #b55151; }
 
-/* Main */
-/* line 54, ../sass/partials/_base.scss */
-main {
-  margin-top: 20px; }
-  /* line 58, ../sass/partials/_base.scss */
-  main article h2 a,
-  main article h2 + p,
-  main article header h2 {
-    color: #703030; }
-  /* line 64, ../sass/partials/_base.scss */
-  main article h2 {
-    font-family: geosanslightregular;
-    font-size: 1.375rem;
-    margin: 0; }
-    /* line 69, ../sass/partials/_base.scss */
-    main article h2 + p {
-      font-family: openSansItalic;
-      font-size: 0.875rem;
-      margin-top: -3px; }
-      /* line 74, ../sass/partials/_base.scss */
-      main article h2 + p time {
-        font-weight: bold; }
-    /* line 79, ../sass/partials/_base.scss */
-    main article h2 + img {
-      float: left;
-      margin: 5px 10px 28px 0;
-      width: 100px;
-      height: 100px; }
-    /* line 86, ../sass/partials/_base.scss */
-    main article h2 a:hover {
-      color: #b55151; }
-  /* line 91, ../sass/partials/_base.scss */
-  main article img {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 14px;
-    border: 4px solid #fff; }
-  /* line 98, ../sass/partials/_base.scss */
-  main article p {
-    margin-bottom: 5px;
-    font-size: 0.875rem;
-    color: #2d2d2d; }
-  /* line 104, ../sass/partials/_base.scss */
-  main article a {
-    color: #703030; }
-    /* line 107, ../sass/partials/_base.scss */
-    main article a:hover {
-      color: #b55151; }
-
 /* tag cloud */
 /* line 3, ../sass/partials/_modules.scss */
 #tag-cloud h3 {
@@ -7543,10 +7494,72 @@ main {
 #latest-comments h3 {
   font-family: geosanslightregular; }
 
+/* Main */
 /* line 2, ../sass/partials/_blog.scss */
-#posts .post {
-  padding: 10px 0;
-  border-bottom: 1px dotted; }
+main {
+  margin-top: 20px; }
+  /* line 6, ../sass/partials/_blog.scss */
+  main article h2,
+  main article h2 a,
+  main article h2 + p,
+  main article header h2 {
+    color: #703030; }
+  /* line 13, ../sass/partials/_blog.scss */
+  main article h2 {
+    font-family: geosanslightregular;
+    font-size: 1.375rem;
+    margin: 0; }
+  /* line 40, ../sass/partials/_blog.scss */
+  main article img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 14px;
+    border: 4px solid white; }
+  /* line 47, ../sass/partials/_blog.scss */
+  main article p {
+    margin-bottom: 5px;
+    font-size: 0.875rem;
+    color: #2d2d2d; }
+  /* line 53, ../sass/partials/_blog.scss */
+  main article a {
+    color: #703030; }
+    /* line 56, ../sass/partials/_blog.scss */
+    main article a:hover {
+      color: #b55151; }
+
+/* line 63, ../sass/partials/_blog.scss */
+#post-listings {
+  overflow: hidden; }
+  /* line 66, ../sass/partials/_blog.scss */
+  #post-listings .post {
+    background-color: white;
+    margin: 15px 0; }
+    /* line 71, ../sass/partials/_blog.scss */
+    #post-listings .post .post-header h2 {
+      font-size: 1.0625rem;
+      padding: 3px 10px;
+      border-bottom: 1px dotted #cccccc; }
+    /* line 78, ../sass/partials/_blog.scss */
+    #post-listings .post .post-content {
+      height: 100px;
+      padding: 4px 10px; }
+      /* line 82, ../sass/partials/_blog.scss */
+      #post-listings .post .post-content a {
+        font-family: geosanslightregular;
+        font-size: 1.375rem; }
+    /* line 88, ../sass/partials/_blog.scss */
+    #post-listings .post .post-footer {
+      padding: 4px 10px; }
+      /* line 91, ../sass/partials/_blog.scss */
+      #post-listings .post .post-footer .post-date {
+        font-family: geosanslightregular;
+        font-size: 0.875rem;
+        color: #703030; }
+
+/* over-ride */
+/* line 101, ../sass/partials/_blog.scss */
+[class*="column"] + [class*="column"]:last-child {
+  float: left; }
 
 /* comments placeholder */
 /* line 3, ../sass/partials/_placeholders.scss */

@@ -1,14 +1,14 @@
-{% extends 'BloggerBlogBundle::layout.html.twig' %}
+{% extends 'BloggerBlogBundle::post-layout.html.twig' %}
 
 {% block title %} {{ blog.title }} {% endblock %}
 
 {% block body_inner %}
 <div class="large-9 columns">
-    <article>
+    <article data-blogId="{{ blog.id }}" id="editable" contenteditable="false">
         <h2>{{ blog.title }}</h2>
         <p>Posted: <time datetime="{{ blog.createdAt|date('c') }}">{{ blog.createdAt|date('l, F, j Y') }}</time></p>
         <img src="{{ asset(['images/', blog.image]|join) }}" alt="{{ blog.title }}">
-        <div id="editable" contenteditable="false">
+        <div>
             <p>{{ blog.content }}</p>
         </div>
     </article>

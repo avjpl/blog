@@ -26,12 +26,12 @@ require(['loader', '../bundles/bloggerblog/js/blog'], function(loader) {
 
     switch(_loader.lookup()) {
         case 'blog':
-            var _blog = require('../bundles/bloggerblog/js/blog');
-
-            _blog._init(_loader.lookup('blog/show', 0));
+//            var _blog = require('../bundles/bloggerblog/js/blog');
+//
+//            _blog._init(_loader.lookup('blog/show', 0));
         break;
 
         default:
-            console.log('must be at / (root)');
+//            console.log('must be at / (root)');
     }
 });

@@ -21,7 +21,8 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "dev-master",
         "doctrine/doctrine-migrations-bundle": "dev-master",
-        "doctrine/migrations": "dev-master"
+        "doctrine/migrations": "dev-master",
+        "ircmaxell/password-compat": "~1.0.3"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

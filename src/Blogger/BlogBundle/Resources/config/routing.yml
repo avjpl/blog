@@ -11,6 +11,12 @@ BloggerBlog_show:
         _method: GET
         id: \d+
 
+BloggerBlog_showCategoriedPost:
+    pattern: /blog/{cat}
+    defaults: { _controller:BloggerBlogBundle:Blog:category }
+    requirements:
+        _method: GET
+
 BloggerBlog_showTaggedPost:
     pattern: /blog/{tag}
     defaults: { _controller:BloggerBlogBundle:Blog:taggedPost }

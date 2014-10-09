@@ -1,28 +1,35 @@
 {% extends 'BloggerBlogBundle::layout.html.twig' %}
 
 {% block body_inner %}
-<div class="large-9 columns">
-    <div id="posts">
-    {% for article in articles %}
-        <article id="{{ article.id }}">
-            <div class="post">
-                <header>
-                    <h2><a href="{{ path('BloggerBlog_show', {id: article.id, 'slug': article.slug}) }}">{{ article.title }}</a></h2>
-                    <img src="{{ asset(['images/', article.image]|join) }}" alt="" />
-                </header>
+<div class="large-12 columns">
+    <div id="post-listings">
+        {% for article in articles %}
+            <div class="large-4 columns">
+                <article id="{{ article.id }}">
+                    <div class="post">
+                    <header>
+                        <div class="post-header">
+                            <a href="{{ path('BloggerBlog_showCategoriedPost', {'cat': article.category|trim}) }}">
+                                <h2>{{ article.category }}</h2>
+                            </a>
+                        </div>
+                    </header>
 
-                <p>Posted: <time datetime="{{ article.createdAt|date('c') }}">{{ article.createdAt|date('F jS Y') }}</time></p>
-                <p>{{ article.content|trunc }}</p>
-                <a href="{{ path('BloggerBlog_show', {id: article.id, 'slug': article.slug}) }}">Read More</a>
+                    <section>
+                        <div class="post-content">
+                            <a href="{{ path('BloggerBlog_show', {id: article.id, 'slug': article.slug}) }}">{{ article.title }}</a>
+                        </div>
+                    </section>
 
-                <footer>
-                    <p>Comments: {{ article.comments|length }}</p>
-                    <p>Posted by <span>{{ article.author }}</span> at {{ article.createdAt|date('h:iA') }}</p>
-                    <p>Tags: <span>{{ article.tags }}</span></p>
-                </footer>
+                    <footer>
+                        <div class="post-footer">
+                            <span class="post-date">Posted: {{ article.createdAt|date('h:iA') }}</span>
+                        </div>
+                    </footer>
+                    </div>
+                </article>
             </div>
-        </article>
-    {% endfor  %}
+        {% endfor  %}
     </div>
 </div>
 {% endblock %}
